@@ -1,0 +1,17 @@
+<%= form_with(model: categories_movie, local: true) do |form| %>
+  <% if categories_movie.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(categories_movie.errors.count, "error") %> prohibited this categories_movie from being saved:</h2>
+
+      <ul>
+      <% categories_movie.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+class LanguagesMovie < ApplicationRecord
+end
